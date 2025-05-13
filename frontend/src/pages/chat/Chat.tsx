@@ -621,6 +621,8 @@ const Chat = () => {
     setIsIntentsPanelOpen(false)
     setActiveCitation(undefined)
     appStateContext?.dispatch({ type: 'UPDATE_CURRENT_CHAT', payload: null })
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
     setProcessMessages(messageStatus.Done)
   }
 
